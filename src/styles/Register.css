@@ -1,0 +1,94 @@
+/* Register.css */
+.register-section {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: rgba(40, 40, 40, 0.85);
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(255, 64, 129, 0.5);
+  color: #fff;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.register-section h2 {
+  color: #ff4081;
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+  text-align: center;
+  animation: fadeInZoom 1s ease forwards;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.register-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+.register-form input {
+  margin-top: 8px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  background-color: #292929;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.register-form input::placeholder {
+  color: #999;
+}
+
+.register-form input:focus {
+  outline: none;
+  background-color: #3a3a3a;
+  box-shadow: 0 0 8px #ff4081;
+}
+
+.register-btn {
+  background-color: #ff4081;
+  color: #fff;
+  font-weight: 700;
+  padding: 14px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+.register-btn:hover {
+  background-color: #e63270;
+}
+
+.shared-bg-section {
+  background: linear-gradient(
+      rgba(29, 29, 29, 0.85),
+      rgba(29, 29, 29, 0.85)
+    ),
+    url('../assets/stars.jpg') no-repeat center center/cover;
+  padding: 80px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+/* reuse keyframes */
+@keyframes fadeInZoom {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

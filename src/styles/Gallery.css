@@ -1,0 +1,37 @@
+.image-grid {
+  column-count: 4; /* Number of columns */
+  column-gap: 15px; /* Gap between columns */
+  padding: 20px;
+}
+
+@media (max-width: 900px) {
+  .image-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .image-grid {
+    column-count: 1;
+  }
+}
+
+.image-box {
+  break-inside: avoid;
+  margin-bottom: 15px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.image-box:hover {
+  transform: scale(1.03);
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}

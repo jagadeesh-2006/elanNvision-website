@@ -1,0 +1,133 @@
+/* ── section & grid remain as before (with animations) ───────────── */
+.events {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.shared-bg-section {
+  background: linear-gradient(
+      rgba(29, 29, 29, 0.85),
+      rgba(29, 29, 29, 0.85)
+    ),
+    url('../assets/paint') no-repeat center center/cover;
+  padding: 80px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.events h2 {
+  color: #ff4081;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  animation: fadeInZoom 1.2s ease forwards;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+  justify-items: center;
+}
+
+.event-card {
+  background: #292929;
+  padding: 30px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 64, 129, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: zoomSpinIn 1.2s ease forwards;
+  opacity: 0;
+}
+
+.event-card:hover {
+  transform: scale(1.08) rotate(-1deg);
+  background-color: #333;
+  box-shadow: 0 0 18px rgba(255, 64, 129, 0.4);
+  scale: 1.1;
+}
+
+/* ── modal styles ───────────────────────────────────────────────── */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.4s ease;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  background: #1e1e1e;
+  border-radius: 16px;
+  padding: 40px 30px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(255, 64, 129, 0.5);
+  animation: popIn 0.5s ease;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+.modal-content h3 {
+  color: #ff4081;
+  margin-bottom: 12px;
+  font-size: 1.8rem;
+}
+
+.modal-content p {
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #ff4081;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
+}
+
+/* ── keyframes ─────────────────────────────────────────────────── */
+@keyframes zoomSpinIn {
+  0% { transform: scale(0.7) rotate(-10deg); opacity: 0; }
+  100% { transform: scale(1) rotate(0); opacity: 1; }
+}
+
+@keyframes fadeInZoom {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
