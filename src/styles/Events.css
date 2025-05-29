@@ -52,7 +52,6 @@
   scale: 1.1;
 }
 
-/* ── modal styles ───────────────────────────────────────────────── */
 .modal-backdrop {
   position: fixed;
   inset: 0;
@@ -111,7 +110,6 @@
   transform: scale(1.2);
 }
 
-/* ── keyframes ─────────────────────────────────────────────────── */
 @keyframes zoomSpinIn {
   0% { transform: scale(0.7) rotate(-10deg); opacity: 0; }
   100% { transform: scale(1) rotate(0); opacity: 1; }
